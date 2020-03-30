@@ -27,7 +27,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="# of clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzO-CY-2Rs">
-                                                    <rect key="frame" x="132" y="19" width="75" height="21"/>
+                                                    <rect key="frame" x="299" y="19" width="75" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -51,6 +51,7 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="VzO-CY-2Rs" secondAttribute="trailing" constant="20" id="9y8-JC-awv"/>
                                                 <constraint firstItem="dXm-x1-iIe" firstAttribute="centerY" secondItem="GSV-BA-mR9" secondAttribute="centerY" id="B22-Jg-Egk"/>
                                                 <constraint firstItem="VzO-CY-2Rs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dXm-x1-iIe" secondAttribute="trailing" constant="8" id="R0d-wo-9Tw"/>
                                                 <constraint firstItem="dXm-x1-iIe" firstAttribute="leading" secondItem="GSV-BA-mR9" secondAttribute="leading" constant="20" id="dyJ-Pm-CD1"/>
@@ -72,7 +73,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="OAU-dA-ilt">
+                    <navigationItem key="navigationItem" title="Grail Diary" largeTitleDisplayMode="always" id="OAU-dA-ilt">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fQG-9o-PIG">
                             <connections>
                                 <segue destination="q3w-E7-p42" kind="presentation" identifier="AddPOIModalSeque" id="KPL-k1-EpT"/>
@@ -204,9 +205,9 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Whm-rf-Vbp">
                                 <rect key="frame" x="0.0" y="759" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="cancel" id="v4E-xG-bG7"/>
+                                    <barButtonItem title="Cancel" id="v4E-xG-bG7"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="PUX-Oh-hK8"/>
-                                    <barButtonItem title="save" id="pal-Lk-Xig"/>
+                                    <barButtonItem title="Save" id="pal-Lk-Xig"/>
                                 </items>
                             </toolbar>
                         </subviews>
