@@ -19,6 +19,14 @@ class POIsTableViewController: UIViewController {
         
         tableView.dataSource = self
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddPOIModalSegue" {
+            if let viewController = segue.destination as? AddPOIViewController {
+                viewController.delegate = self
+            }
+        }
+    }
 
 
 }
@@ -33,6 +41,12 @@ extension POIsTableViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    
+}
+
+extension POIsTableViewController: AddPOIDelegate {
+    func poiWasAdded(_ poi: POI) {
+        placesOfInterest.append(poi)
+        dismiss(animated: true, completion: nil)
+        tableView.reloadData()
+    }
 }
