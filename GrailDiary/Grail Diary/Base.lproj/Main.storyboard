@@ -153,6 +153,11 @@
                         <viewLayoutGuide key="safeArea" id="pmQ-FH-lvD"/>
                     </view>
                     <navigationItem key="navigationItem" id="2lr-eh-zvO"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="kVd-TF-hke" id="7UY-4b-KfE"/>
+                        <outlet property="countryLabel" destination="jvz-uw-Fav" id="gqb-Lp-ZwP"/>
+                        <outlet property="locationLabel" destination="nsG-lB-DDT" id="JDd-e6-pJP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Hb-xv-RWw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
