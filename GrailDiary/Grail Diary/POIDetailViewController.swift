@@ -16,6 +16,12 @@ class POIDetailViewController: UIViewController {
     
     var poi: POI?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        updateViews()
+    }
+
     private func updateViews() {
         guard let poi = poi else {
             return
@@ -23,17 +29,11 @@ class POIDetailViewController: UIViewController {
         
         locationLabel.text = poi.location
         countryLabel.text = poi.county
+        cluesTextView.text = ""
         for clue in poi.clues {
             cluesTextView.text += "- \(clue)\n"
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        updateViews()
-    }
-    
 
     /*
     // MARK: - Navigation

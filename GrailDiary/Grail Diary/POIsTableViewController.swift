@@ -24,6 +24,12 @@ class POIsTableViewController: UIViewController {
         if segue.identifier == "AddPOIModalSegue" {
             if let viewController = segue.destination as? AddPOIViewController {
                 viewController.delegate = self
+                
+            }
+        } else if segue.identifier == "ShowPOIDetailSegue" {
+            if let indexPath = tableView.indexPathForSelectedRow,
+                let viewController = segue.destination as? POIDetailViewController  {
+                viewController.poi = placesOfInterest[indexPath.row]
             }
         }
     }
@@ -37,7 +43,10 @@ extension POIsTableViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else {
+            fatalError("Not a POITableViewCell")
+        }
+        cell.poi = placesOfInterest[indexPath.row]
         
         return cell
     }

@@ -79,7 +79,7 @@
                     <navigationItem key="navigationItem" title="Grail Diary" largeTitleDisplayMode="always" id="OAU-dA-ilt">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fQG-9o-PIG">
                             <connections>
-                                <segue destination="q3w-E7-p42" kind="presentation" identifier="AddPOIModalSeque" id="KPL-k1-EpT"/>
+                                <segue destination="q3w-E7-p42" kind="presentation" identifier="AddPOIModalSegue" id="KPL-k1-EpT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
