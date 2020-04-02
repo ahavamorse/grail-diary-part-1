@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct POI {
+    let location: String
+    let county: String
+    var clues: [String]
+}
