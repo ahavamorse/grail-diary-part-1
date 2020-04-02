@@ -58,6 +58,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="countryLabel" destination="qUd-m2-B97" id="iqF-pK-DHM"/>
+                                            <outlet property="locationLabel" destination="hdY-aW-KkT" id="aya-Lh-9x7"/>
+                                            <outlet property="numOfCluesLabel" destination="VzO-CY-2Rs" id="BNv-8g-pt8"/>
                                             <segue destination="zig-0G-lku" kind="show" identifier="ShowPOIDetailSegue" id="3oT-Z7-9jd"/>
                                         </connections>
                                     </tableViewCell>

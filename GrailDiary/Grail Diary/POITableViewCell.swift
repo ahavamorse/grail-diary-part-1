@@ -10,6 +10,27 @@ import UIKit
 
 class POITableViewCell: UITableViewCell {
 
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var numOfCluesLabel: UILabel!
+    
+    var poi: POI? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    private func updateViews() {
+        guard let poi = poi else {
+            return
+        }
+        
+        locationLabel.text = poi.location
+        countryLabel.text = poi.county
+        numOfCluesLabel.text = String(poi.clues.count)
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
